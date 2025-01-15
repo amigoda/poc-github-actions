@@ -1,0 +1,31 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: -webkit-link;
+}
+
+a:active {
+    text-decoration: underline;
+    text-decoration-color: -webkit-activelink;
+}
+
+a:visited:hover {
+    text-decoration: underline;
+    text-decoration-color: purple;
+}
+
+a code {
+    color: -webkit-link;
+}
+
+a:visited code  {
+    color: purple;
+}
+
+li ul,
+li li {
+    margin-top: 0.5em;
+}

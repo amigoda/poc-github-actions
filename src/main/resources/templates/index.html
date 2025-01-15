@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <title>PoC GitHub Actions</title>
+</head>
+<body>
+    <h1>PoC GitHub Actions</h1>
+    <h2>API Endpoints</h2>
+    <ul>
+        <li>
+            <a th:href="@{/api/time}"><code>/api/time</code></a>
+            <ul>
+                <li>
+                    Returns the current time of the server.
+                </li>
+                <li>
+                    Format:
+                    <br>
+                    &rArr;
+                    <code>/api/time?timeZone=&lt;timezone&gt;</code>
+                </li>
+                <li>
+                    Parameters:
+                    <ul>
+                        <li>
+                            Without params it returns the time in the default time zone.
+                        </li>
+                        <li>
+                            <code>timeZone</code>
+                            &rArr;
+                            The time zone.
+                            Examples: GMT, UTC, GMT+2, UTC-5, ...
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Examples:
+                    <ul>
+                        <li>
+                            <a th:href="@{/api/time}"><code>/api/time</code></a>
+                        </li>
+                        <li>
+                            <a th:href="@{/api/time(timeZone='UTC')}"><code>/api/time?timeZone=UTC</code></a>
+                        </li>
+                        <li>
+                            <a th:href="@{/api/time(timeZone='UTC+1')}"><code>/api/time?timeZone=UTC+1</code></a>
+                        </li>
+                        <li>
+                            <a th:href="@{/api/time(timeZone='UTC-1')}"><code>/api/time?timeZone=UTC-1</code></a>
+                        </li>
+                        <li>
+                            <a th:href="@{/api/time(timeZone='GMT')}"><code>/api/time?timeZone=GMT</code></a>
+                        </li>
+                        <li>
+                            <a th:href="@{/api/time(timeZone='Europe/Paris')}"><code>/api/time?timeZone=Europe/Paris</code></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
