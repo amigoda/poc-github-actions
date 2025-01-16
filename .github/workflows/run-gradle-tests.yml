@@ -12,7 +12,7 @@ jobs:
           echo "Repository is ${{ github.repository }}."
           echo "Branch is ${{ github.ref }}."
           echo "User is ${{ github.actor }}."
-          echo "Trigger action is ${{ github.event_name }}."
+          echo "Event is ${{ github.event_name }}."
 
       - name: Check out repository ${{ github.repository }}
         uses: actions/checkout@v4
@@ -37,3 +37,5 @@ jobs:
 
       - name: Ensure app is compiled
         run: ls ${{ github.workspace }}/build/libs/
+
+      - run: echo "Job finished. The status is ${{ job.status }}."

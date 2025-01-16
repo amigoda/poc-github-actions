@@ -85,8 +85,8 @@ public class ApiControllerTest extends RestControllerTest {
         Assertions.assertTrue(body.contains("Unknown time-zone"), wrongResultMsg(testUrl, "error message", body));
     }
 
-    @Test
-    public void testThatFails() {
-        Assertions.fail("This unit test fails to test GitHub Actions.");
-    }
+//    @Test
+//    public void testThatFails() {
+//        Assertions.fail("This unit test fails to test GitHub Actions.");
+//    }
 }
