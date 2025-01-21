@@ -5,7 +5,7 @@ run-name: Run Graddle Tests on ${{ github.repository }}
 on:
   push:
     paths:
-      - '/src/**'
+      - 'src/**'
 
 jobs:
   Run-Gradle-Tests:
