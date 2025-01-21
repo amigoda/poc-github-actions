@@ -46,6 +46,21 @@ The most common events are `push` and `pull_request` but there are tens of diffe
 * `schedule` to trigger a workflow at a scheduled time (like a cron job).
 * ...and many more. See [events that trigger workflows](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows) page.
 
+For each **event** you can also configure the **included or excluded paths**,
+the **included or excluded branches or tags**, and more. 
+
+```shell
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v2.*
+    paths:
+      - 'src/**'
+      - '!src/docs/**'
+```
+
 #### Jobs and Steps
 
 A **job** is a set of **steps** in a workflow that is executed on the same **runner**,
